@@ -9,7 +9,7 @@ export default function NavBar() {
   const [dropDown, setDropDown] = useState(false);
 
   const toggleDropdown = () => {
-    setDropDown(true);
+    setDropDown(!dropDown);
   };
 
   return (
@@ -101,9 +101,7 @@ export default function NavBar() {
       needs work 
       */}
       <div
-        className={`flex flex-col justify-center  items-start w-full max-h-[${
-          dropDown ? "150px" : "0px"
-        }]  bg-blue overflow-hidden ${dropDown ? "flex" : "hidden"}] `}
+        className={` flex-col justify-center  items-start w-full  bg-blue overflow-hidden ${!dropDown ? 'h-[0px]' : 'h-[200px]'} `}
       >
         {dropDown} .
       </div>

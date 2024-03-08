@@ -27,6 +27,44 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.scroll-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  will-change: transform;
+
+  .ghost {
+    width: 100vw;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 1px;
+  background: rgba(113, 113, 113, 0.9) ;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
