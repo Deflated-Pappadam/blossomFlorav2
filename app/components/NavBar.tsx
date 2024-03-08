@@ -22,41 +22,43 @@ export default function NavBar() {
       </div>
       {/* Logo or Menu */}
       <div
-        className={`w-full md:w-[80%] flex justify-between items-center mx-auto p-2 `}
+        className={`w-full md:w-[80%]  flex justify-between items-center mx-auto p-2 `}
       >
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={130}
-          height={130}
-          className={`md:flex hidden justify-center items-center pt-5`}
-        />
-        <button onClick={toggleDropdown}>
+        <div className="flex md:min-w-[200px]">
           <Image
-            src="/menu.png"
+            src="/logo.png"
             alt="Logo"
-            width={30}
-            height={30}
-            className={`flex md:hidden justify-center items-center pt-5`}
+            width={125}
+            height={125}
+            className={`md:flex hidden justify-center items-center pt-5`}
           />
-        </button>
+          <button onClick={toggleDropdown}>
+            <Image
+              src="/menu.png"
+              alt="Logo"
+              width={30}
+              height={30}
+              className={`flex md:hidden justify-center items-center pt-5`}
+            />
+          </button>
+        </div>
 
         {/* Main Logo */}
         <div
-          className={`flex flex-col justify-center items-center ${font_logo.className} text-primary text-center text-xl md:text-6xl md:-mt-[15px]`}
+          className={`flex flex-col justify-center items-center  ${font_logo.className} text-primary text-center text-xl md:text-5xl md:-mt-[15px] `}
         >
-          <div className=" md:text-3xl text-md">The </div>Blossom Flora
+          <div className=" md:text-2xl text-md">The </div>Blossom Flora
         </div>
 
-        {/* Profile Cart */}
-        <div className="flex  justify-center items-center gap-4">
+        {/* Profile & Cart */}
+        <div className="flex  justify-center items-center gap-4 md:min-w-[200px]">
           <Image src="/profile.png" alt="" width={40} height={40} />
           <Image src="/cart.png" alt="" width={40} height={40} />
         </div>
       </div>
 
       {/* nav desktop */}
-      <div className="w-full hidden md:flex  text-xl font-extralight items-center text-center justify-center gap-8  p-5">
+      <div className="w-fit hidden md:flex  text-xl font-extralight items-center text-center justify-center gap-8 mx-auto pb-5">
         <Link
           href="/"
           className="group relative inline-block hover:cursor-pointer"
@@ -93,14 +95,18 @@ export default function NavBar() {
           <span className="absolute top-8 left-0 group-hover:w-full w-0 h-[2px] transition-all bg-black "></span>
         </Link>
       </div>
-{/* nav mobile */}
+
+      {/* 
+      nav mobile 
+      needs work 
+      */}
       <div
         className={`flex flex-col justify-center  items-start w-full max-h-[${
           dropDown ? "150px" : "0px"
-        }]  bg-blue overflow-hidden ${
-            dropDown ? "flex" : "hidden"
-          }] `}
-      >{dropDown} .</div>
+        }]  bg-blue overflow-hidden ${dropDown ? "flex" : "hidden"}] `}
+      >
+        {dropDown} .
+      </div>
     </nav>
   );
 }
