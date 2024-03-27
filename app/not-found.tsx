@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import NavBar from "./app/components/NavBar";
+import NavBar from "./components/NavBar";
+
 
 export default function Error({
   error,
