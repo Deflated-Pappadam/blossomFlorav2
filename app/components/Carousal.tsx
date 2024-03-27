@@ -9,11 +9,11 @@ function Carousal() {
   const images: string[] = ["Item (1).jpg", "Item (2).jpg", "Item (3).jpg"];
 
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-full h-full">
       <Swiper
         autoplay={true}
         loop={true}
-        className="w-full max-h-[500px]"
+        className="w-full h-full "
         modules={[Autoplay, Pagination]}
       >
         {images.map((src, index) => (
