@@ -10,11 +10,11 @@ export const font_logo = localFont({
   ],
 });
 
-export const font_heading_bold = Poppins({
+export const font_heading_bold = Pathway_Extreme({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: "700",
+  weight: "500",
 });
 
 export const font_text = Poppins({
@@ -24,10 +24,13 @@ export const font_text = Poppins({
   weight: "300",
 });
 
-export const font_subHeading = Pathway_Extreme({
+export const font_subHeading =
+Poppins({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
   weight: "300",
 });
+
+
 
