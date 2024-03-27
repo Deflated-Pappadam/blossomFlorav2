@@ -27,16 +27,24 @@ export default function Home() {
       </section>
 
       <section
-        id="latestCollection"
+        id="collection"
         className="flex min-h-screen flex-col items-center justify-center"
       >
         <div className="flex flex-col items-center justify-center space-y-2">
-          <h1 className={`${font_heading_bold.className} md:text-4xl text-2xl font-bold text-center`}>
-            Blossom Flora <br className="md:hidden flex"/>Spring Bouquet Collection
+          <h1
+            className={`${font_heading_bold.className} text-center text-2xl font-bold md:text-4xl`}
+          >
+            Blossom Flora <br className="flex md:hidden" />
+            Spring Bouquet Collection
           </h1>
-          <a href="/collections"className={`${font_subHeading.className} text-sm md:text-xl cursor-pointer `}>VIEW ALL</a>
+          <a
+            href="/collections"
+            className={`${font_subHeading.className} cursor-pointer text-sm md:text-xl `}
+          >
+            VIEW ALL
+          </a>
         </div>
-        <div className="flex md:flex-row flex-col md:space-y-0 space-y-5 w-full items-center gap-5 p-5">
+        <div className="flex w-full flex-col items-center gap-5 space-y-5 p-5 md:flex-row md:space-y-0">
           <ItemBox
             id="1"
             name="Something"
@@ -61,6 +69,34 @@ export default function Home() {
             ImageUrl="/items/Item (1).jpg"
             price={10}
           />
+        </div>
+      </section>
+      <section id="newItem" className="flex md:flex-row flex-col h-full w-full md:w-[90%] justify-center items-center mx-auto">
+        <div className="md:w-[60%] w-full p-10 md:order-0 order-1">
+          <h2
+            className={`${font_subHeading.className} text-md cursor-pointer  md:text-2xl `}
+          >
+            INTRODUCING:
+          </h2>
+
+          <h1
+            className={`${font_heading_bold.className}  text-2xl font-bold md:text-4xl`}
+          >
+            THE BLOOM BOX
+          </h1>
+          <p
+            className={`${font_subHeading.className} text-md cursor-pointer  py-5 md:text-2xl`}
+          >
+            With a variety of blooms to choose from, create your own custom
+            arrangement or let us surprise you with our curated selection, all
+            packed in a stylish box to make the perfect gift.
+          </p>
+          <button className="my-5 h-fit w-fit bg-primary p-2 px-4 text-lg text-background">
+            ORDER HERE
+          </button>
+        </div>
+        <div className="md:w-[60%] w-full md:order-1 order-0">
+          <Image src="/items/Item (2).jpg" alt=""  width={1080} height={920} className="w-[500px]"/>
         </div>
       </section>
     </main>
