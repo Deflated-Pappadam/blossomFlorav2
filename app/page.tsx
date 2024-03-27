@@ -71,7 +71,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="newItem" className="flex md:flex-row flex-col h-full w-full md:w-[90%] justify-center items-center mx-auto">
+      <section id="newItem" className="flex md:flex-row flex-col h-full w-full md:w-[90%] justify-center items-center mx-auto p-5">
         <div className="md:w-[60%] w-full p-10 md:order-0 order-1">
           <h2
             className={`${font_subHeading.className} text-md cursor-pointer  md:text-2xl `}
@@ -95,7 +95,7 @@ export default function Home() {
             ORDER HERE
           </button>
         </div>
-        <div className="md:w-[60%] w-full md:order-1 order-0">
+        <div className="md:w-[60%] w-full md:order-1 order-0 flex justify-center items-center">
           <Image src="/items/Item (2).jpg" alt=""  width={1080} height={920} className="w-[500px]"/>
         </div>
       </section>
