@@ -4,6 +4,9 @@ import NavBar from "./components/NavBar";
 import Carousal from "./components/Carousal";
 import { font_heading_bold, font_subHeading } from "./assets/fonts";
 import ItemBox from "./components/ItemBox";
+import CollectionsBox from "./components/CollectionBox";
+import Footer from "./components/Footer";
+
 
 export default function Home() {
   return (
@@ -71,8 +74,11 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="newItem" className="flex md:flex-row flex-col h-full w-full md:w-[90%] justify-center items-center mx-auto p-5">
-        <div className="md:w-[60%] w-full p-10 md:order-0 order-1">
+      <section
+        id="newItem"
+        className="mx-auto flex h-full w-full flex-col items-center justify-center p-5 md:w-[90%] md:flex-row"
+      >
+        <div className="md:order-0 order-1 w-full p-10 md:w-[60%]">
           <h2
             className={`${font_subHeading.className} text-md cursor-pointer  md:text-2xl `}
           >
@@ -95,10 +101,51 @@ export default function Home() {
             ORDER HERE
           </button>
         </div>
-        <div className="md:w-[60%] w-full md:order-1 order-0 flex justify-center items-center">
-          <Image src="/items/Item (2).jpg" alt=""  width={1080} height={920} className="w-[500px]"/>
+        <div className="order-0 flex w-full items-center justify-center md:order-1 md:w-[60%]">
+          <Image
+            src="/items/Item (2).jpg"
+            alt=""
+            width={1080}
+            height={920}
+            className="w-[500px]"
+          />
         </div>
       </section>
+
+      <section
+        id="collectionSection"
+        className="flex flex-col items-center justify-center"
+      >
+        <div
+          className={`${font_heading_bold.className}  text-center text-2xl font-bold md:text-4xl`}
+        >
+          Collections
+        </div>
+        <a
+          href="/collections"
+          className={`${font_subHeading.className} cursor-pointer text-sm md:text-xl p-2`}
+        >
+          VIEW ALL
+        </a>
+        <div className="mx-auto flex flex-wrap justify-center gap-10 overflow-scroll  p-5 md:w-[75%] md:overflow-hidden">
+          <CollectionsBox url="/items/Item (5).jpg" name="Premium Car Deck." />
+          <CollectionsBox
+            url="/items/Item (4).jpg"
+            name="Red rose, dried Gixo. Bouqet"
+          />
+          <CollectionsBox url="/items/Item (3).jpg" name="Artifical Bouquet" />
+          <CollectionsBox
+            url="/items/Item (2).jpg"
+            name="Decorated candle."
+          />
+          <CollectionsBox
+            url="/items/Item (1).jpg"
+            name="  Cypress Car Dexk."
+          />
+          <CollectionsBox url="/items/Item (6).jpg" name="Artifical Bouquet" />
+        </div>
+      </section>
+      <Footer/>
     </main>
   );
 }
