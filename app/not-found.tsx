@@ -5,10 +5,9 @@ import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import NavBar from "./components/NavBar";
 
-
 export default function Error({
   error,
-  reset,
+  reset
 }: {
   error: Error & { digest?: string };
   reset: () => void;

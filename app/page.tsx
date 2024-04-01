@@ -7,7 +7,6 @@ import ItemBox from "./components/ItemBox";
 import CollectionsBox from "./components/CollectionBox";
 import Footer from "./components/Footer";
 
-
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen flex-col items-center justify-between  bg-background">
@@ -16,8 +15,8 @@ export default function Home() {
         <div className="flex w-full flex-col md:flex-row">
           <div className="md:order-0 order-1 m-auto flex h-full w-full flex-col items-center justify-center bg-accent  p-10 md:w-[50%]">
             <div className="flex flex-col justify-center text-2xl leading-none text-primary md:p-10 md:text-[3vw] ">
-              SPECIALISTS IN THE CREATION, CURATION AND SUPPLY OF HIGH-QUALITY,
-              STYLISH AND UNIQUE FLOWERS.
+              SPECIALISTS IN THE CREATION, CURATION AND SUPPLY OF HIGH-QUALITY, STYLISH
+              AND UNIQUE FLOWERS.
               <button className="my-5 h-fit w-fit bg-primary p-2 px-4 text-lg text-background">
                 COLLECTIONS
               </button>
@@ -48,30 +47,10 @@ export default function Home() {
           </a>
         </div>
         <div className="flex w-full flex-col items-center gap-5 space-y-5 p-5 md:flex-row md:space-y-0">
-          <ItemBox
-            id="1"
-            name="Something"
-            ImageUrl="/items/Item (1).jpg"
-            price={10}
-          />
-          <ItemBox
-            id="1"
-            name="Something"
-            ImageUrl="/items/Item (1).jpg"
-            price={10}
-          />
-          <ItemBox
-            id="1"
-            name="Something"
-            ImageUrl="/items/Item (1).jpg"
-            price={10}
-          />
-          <ItemBox
-            id="1"
-            name="Something"
-            ImageUrl="/items/Item (1).jpg"
-            price={10}
-          />
+          <ItemBox id="1" name="Something" ImageUrl="/items/Item (1).jpg" price={10} />
+          <ItemBox id="1" name="Something" ImageUrl="/items/Item (1).jpg" price={10} />
+          <ItemBox id="1" name="Something" ImageUrl="/items/Item (1).jpg" price={10} />
+          <ItemBox id="1" name="Something" ImageUrl="/items/Item (1).jpg" price={10} />
         </div>
       </section>
       <section
@@ -93,9 +72,9 @@ export default function Home() {
           <p
             className={`${font_subHeading.className} text-md cursor-pointer  py-5 md:text-2xl`}
           >
-            With a variety of blooms to choose from, create your own custom
-            arrangement or let us surprise you with our curated selection, all
-            packed in a stylish box to make the perfect gift.
+            With a variety of blooms to choose from, create your own custom arrangement or
+            let us surprise you with our curated selection, all packed in a stylish box to
+            make the perfect gift.
           </p>
           <button className="my-5 h-fit w-fit bg-primary p-2 px-4 text-lg text-background">
             ORDER HERE
@@ -123,29 +102,20 @@ export default function Home() {
         </div>
         <a
           href="/collections"
-          className={`${font_subHeading.className} cursor-pointer text-sm md:text-xl p-2`}
+          className={`${font_subHeading.className} cursor-pointer p-2 text-sm md:text-xl`}
         >
           VIEW ALL
         </a>
         <div className="mx-auto flex flex-wrap justify-center gap-10 overflow-scroll  p-5 md:w-[75%] md:overflow-hidden">
           <CollectionsBox url="/items/Item (5).jpg" name="Premium Car Deck." />
-          <CollectionsBox
-            url="/items/Item (4).jpg"
-            name="Red rose, dried Gixo. Bouqet"
-          />
+          <CollectionsBox url="/items/Item (4).jpg" name="Red rose, dried Gixo. Bouqet" />
           <CollectionsBox url="/items/Item (3).jpg" name="Artifical Bouquet" />
-          <CollectionsBox
-            url="/items/Item (2).jpg"
-            name="Decorated candle."
-          />
-          <CollectionsBox
-            url="/items/Item (1).jpg"
-            name="  Cypress Car Dexk."
-          />
+          <CollectionsBox url="/items/Item (2).jpg" name="Decorated candle." />
+          <CollectionsBox url="/items/Item (1).jpg" name="  Cypress Car Dexk." />
           <CollectionsBox url="/items/Item (6).jpg" name="Artifical Bouquet" />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
