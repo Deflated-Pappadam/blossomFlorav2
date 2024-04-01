@@ -1,1 +1,1 @@
-DEBUG=husky,lint-staged:* git commit --allow-empty -m "refactor: husky formatting"
+npx lint-staged
